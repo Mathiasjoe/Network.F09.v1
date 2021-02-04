@@ -28,8 +28,13 @@ public class MessagePost extends Post
         message = text;
     }
 
+    public String toString(){
+        return super.toString() + message + "\n";
+    }
+
+
     public void display() {
-        System.out.println("Message: " + getText());
+        System.out.println(toString());
     }
 
 

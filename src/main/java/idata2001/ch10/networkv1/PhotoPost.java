@@ -32,10 +32,14 @@ public class PhotoPost extends Post
 
     }
 
+    public String toString(){
+        return super.toString() + caption + "\n";
+    }
+
 
     public void display() {
         super.display();
-        System.out.println("Photo: " + getCaption());
+        System.out.println(toString());
     }
 
 
