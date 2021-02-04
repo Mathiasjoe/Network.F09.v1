@@ -35,7 +35,7 @@ public class PhotoPost extends Post
 
     public void display() {
         super.display();
-        System.out.println("Printing from PhotoPost...");
+        System.out.println("Photo: " + getCaption());
     }
 
 

@@ -53,13 +53,41 @@ public class Post {
     return timestamp;
   }
 
+
+  public String toString() {
+
+    String text = username + "\n" + timeString(timestamp);
+    if (likes > 0) {
+      text += " - " + likes + "people like this. \n";
+    }
+      else{
+        text += "\n";
+      }
+
+    if(comments.isEmpty()){
+      return text + " No comments. \n";
+    }
+    else{
+      return text + "  " + comments.size() +
+              " Comment(s). Click here to view. \n";
+    }
+  }
+
+
+
+
   /**
    * Display the details of this post.
    *
    * (Currently: Print to the text terminal. This is simulating display
    * in a web browser for now.)
    */
-  public void display()
+
+  public void display(){
+    System.out.println(toString());
+  }
+
+ /** public void display()
   {
     System.out.println(username);
     System.out.print(timeString(timestamp));
@@ -78,6 +106,9 @@ public class Post {
       System.out.println("   " + comments.size() + " comment(s). Click here to view.");
     }
   }
+  */
+
+
 
   /**
    * Create a string describing a time point in the past in terms

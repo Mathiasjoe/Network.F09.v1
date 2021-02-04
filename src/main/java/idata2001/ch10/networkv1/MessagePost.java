@@ -29,7 +29,7 @@ public class MessagePost extends Post
     }
 
     public void display() {
-        System.out.println("Printing from MessagePost...");
+        System.out.println("Message: " + getText());
     }
 
 
